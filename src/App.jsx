@@ -1,11 +1,11 @@
 import React from 'react';
-import Form from 'components/molecules/Form';
+import Main from 'components/templates/Main';
 import './assets/global.scss'
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <Main />
     </div>
   );
 }
