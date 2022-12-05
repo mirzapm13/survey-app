@@ -20,7 +20,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            components: path.resolve(__dirname, './src'),
+            components: path.resolve(__dirname, './src/components'),
         },
         extensions: ['.js', '.jsx'],
         fallback: {
@@ -35,8 +35,7 @@ module.exports = {
     plugins: [
         // Generate HTML files from template
         new HtmlWebpackPlugin({
-            title: 'Boilerplate React Webpack 5',
-            favicon: './public/favicon.png',
+            title: 'Test React',
             template: './public/index.html',
             filename: 'index.html',
         }),
