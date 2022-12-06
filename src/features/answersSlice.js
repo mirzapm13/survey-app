@@ -9,16 +9,12 @@ const answersSlice = createSlice({
   initialState,
   reducers: {
     addAnswer(state, action) {
-      const mutate = [...state.answers]
-      mutate[action.payload.current] = action.payload.chosen
-      return {
-        ...state,
-        answers: mutate,
-      }
+      // eslint-disable-next-line no-param-reassign
+      state.answers[action.payload.current] = action.payload.chosen
     },
   },
 })
 
-export const { nextQuestion } = answersSlice.actions
+export const { addAnswer } = answersSlice.actions
 
 export default answersSlice.reducer

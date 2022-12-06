@@ -1,6 +1,14 @@
-import { legacy_createStore as createStore } from 'redux';
-import rootReducer from './reducers/root';
+import { configureStore } from '@reduxjs/toolkit'
 
-const store = createStore(rootReducer)
+import questionsReducer from '../features/questionsSlice'
+import answersReducer from '../features/answersSlice'
+
+const store = configureStore({
+  reducer: {
+    // Define a top-level state field named `todos`, handled by `todosReducer`
+    questions: questionsReducer,
+    answers: answersReducer,
+  },
+})
 
 export default store

@@ -4,12 +4,12 @@ import Submit from 'components/atoms/Submit'
 import Text from 'components/atoms/Text'
 import './__Form.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { nextQuestion } from 'store/actions/questionAction'
-import { addAnswer } from 'store/actions/answerAction'
+import { nextQuestion } from '../../../features/questionsSlice'
+import { addAnswer } from '../../../features/answersSlice'
 
 export default function Form() {
-  const { currQuestion, questions } = useSelector((state) => state.questionReducer)
-  const { answers } = useSelector((state) => state.answerReducer)
+  const { currQuestion, questions } = useSelector((state) => state.questions)
+  const { answers } = useSelector((state) => state.answers)
 
   const dispatch = useDispatch()
 
