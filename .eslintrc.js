@@ -25,7 +25,7 @@ module.exports = {
     'linebreak-style': ['error', 'windows'],
     'react/jsx-indent': ['error', 2],
     'max-len': [2, 140, 2],
-    'no-console': 'warn',
+    'no-console': 'off',
     // 'react/prop-types': [2, { ignore: ['history'] }],
     'jsx-a11y/label-has-associated-control': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
@@ -39,5 +39,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-restricted-exports': 'off',
     'import/no-unresolved': 'off',
+    'default-param-last': 'off',
   },
 };
