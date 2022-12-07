@@ -22,12 +22,6 @@ export default function Form() {
     dispatch(addAnswer(payload))
   }
 
-  if (!questions[currQuestion]) {
-    return (
-      <div>You finished the quiz</div>
-    )
-  }
-
   return (
     <div className="survey-form">
       <Text textContent={questions[currQuestion].question} />

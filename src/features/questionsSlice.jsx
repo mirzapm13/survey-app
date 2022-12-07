@@ -98,9 +98,13 @@ const questionsSlice = createSlice({
       // eslint-disable-next-line no-param-reassign
       state.currQuestion += 1
     },
+    resetCurrQuestion(state) {
+      // eslint-disable-next-line no-param-reassign
+      state.currQuestion = initialState.currQuestion
+    },
   },
 })
 
-export const { nextQuestion } = questionsSlice.actions
+export const { nextQuestion, resetCurrQuestion } = questionsSlice.actions
 
 export default questionsSlice.reducer
