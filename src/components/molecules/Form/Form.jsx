@@ -32,8 +32,8 @@ export default function Form() {
 
   return (
     <div className="survey-form">
+      { error && <p id="error">You haven&apos;t choose an answer yet</p> }
       <Text textContent={questions[currQuestion].question} />
-      { error && <p>You haven&apos;t choose an answer yet</p> }
       {questions[currQuestion].answers.map((item, idx) => (
         <Choice
           key={item}
@@ -41,6 +41,7 @@ export default function Form() {
           handleAnswer={handleAnswer}
           idx={idx}
           currQuestion={currQuestion}
+          isActive={(answers[currQuestion] === idx)}
         />
       ))}
       <Submit btnText="Submit" handleClick={handleClick} />

@@ -10,7 +10,7 @@ import timersReducer from '../features/timersSlice'
 const persistConfig = {
   key: 'root',
   storage,
-  // blacklist: ['timers'],
+  blacklist: ['timers', 'questions', 'answers'],
 }
 
 const persistedReducer = persistCombineReducers(persistConfig, {
