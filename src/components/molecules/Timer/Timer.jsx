@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import DateTimeDisplay from 'components/atoms/DateTimeDisplay'
 import './__Timer.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { setCountdown } from '../../../features/timersSlice'
+import { setCountdown } from 'features/timersSlice'
 
 export default function Timer() {
   const dispatch = useDispatch()
@@ -17,30 +17,24 @@ export default function Timer() {
     return () => clearInterval(interval)
   }, [])
 
+  const formatMinutes = (time) => {
+    let minuteTime = Math.floor(time % (1000 * 60 * 60)) / (1000 * 60)
+    minuteTime = Math.floor(minuteTime).toString()
+    if (minuteTime.length < 2) return `0${minuteTime}`
+    return minuteTime
+  }
+  const formatSeconds = (time) => {
+    let secondTime = Math.floor((time % (1000 * 60)) / 1000)
+    secondTime = Math.floor(secondTime).toString()
+    if (secondTime.length < 2) return `0${secondTime}`
+    return secondTime
+  }
+
   return (
     <div className="timer">
-      <DateTimeDisplay />
+      <DateTimeDisplay time={formatMinutes(countdown)} />
       <p>:</p>
-      <DateTimeDisplay />
-      <p>:</p>
-      <DateTimeDisplay />
-
-      <p>
-        day :
-        {Math.floor(countdown / (1000 * 60 * 60 * 24))}
-      </p>
-      <p>
-        hours :
-        {Math.floor(countdown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)}
-      </p>
-      <p>
-        minutes :
-        {Math.floor(countdown % (1000 * 60 * 60)) / (1000 * 60)}
-      </p>
-      <p>
-        seconds  :
-        {Math.floor((countdown % (1000 * 60)) / 1000)}
-      </p>
+      <DateTimeDisplay time={formatSeconds(countdown)} />
     </div>
   )
 }

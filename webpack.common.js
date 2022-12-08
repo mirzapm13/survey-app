@@ -22,6 +22,7 @@ module.exports = {
         alias: {
             components: path.resolve(__dirname, './src/components'),
             store: path.resolve(__dirname, './src/store'),
+            features: path.resolve(__dirname, './src/features'),
         },
         extensions: ['.js', '.jsx'],
         fallback: {

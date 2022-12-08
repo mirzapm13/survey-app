@@ -1,0 +1,29 @@
+.finished {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    border-radius: 15px;
+    p {
+        font-size: xx-large;
+    }
+}
+
+.answers {
+    #title {
+        font-size: larger;
+        line-height: 1;
+    }
+    p {
+        font-size: medium;
+        line-height: 0.5;
+    }
+}

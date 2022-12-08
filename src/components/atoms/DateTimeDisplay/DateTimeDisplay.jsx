@@ -1,9 +1,7 @@
 import React from 'react'
 
-export default function DateTimeDisplay() {
+export default function DateTimeDisplay({ time }) {
   return (
-    <div>
-      <p>00</p>
-    </div>
+    <p>{ time }</p>
   )
 }

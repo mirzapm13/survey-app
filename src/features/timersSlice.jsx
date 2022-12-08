@@ -22,6 +22,6 @@ const timersSlice = createSlice({
   },
 })
 
-export const { setStart, setEnd, setCountdown } = timersSlice.actions
+export const { resetCountdown, setCountdown } = timersSlice.actions
 
 export default timersSlice.reducer

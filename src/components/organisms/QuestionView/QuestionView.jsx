@@ -15,9 +15,9 @@ export default function QuestionView() {
   }
 
   return (
-    <div>
-      <Form />
+    <>
       <Timer />
-    </div>
+      <Form />
+    </>
   )
 }

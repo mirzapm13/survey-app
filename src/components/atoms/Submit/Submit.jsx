@@ -1,4 +1,5 @@
 import React from 'react'
+import './__Submit.scss'
 
 export default function Submit({ btnText, handleClick }) {
   return (

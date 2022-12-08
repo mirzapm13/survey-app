@@ -1,11 +1,11 @@
 import React from 'react';
-import Main from 'components/templates/Main';
+import Survey from 'components/pages/Survey'
 import './assets/global.scss'
 
 function App() {
   return (
     <div className="App">
-      <Main />
+      <Survey />
     </div>
   );
 }
